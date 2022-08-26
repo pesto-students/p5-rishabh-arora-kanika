@@ -1,0 +1,96 @@
+
+.article1{
+  text-align: center;
+}
+
+/*.column {
+  float: left;
+  width: 50%;
+  padding-right:30px;
+} */
+.logo{
+  height: 60%;
+    width: 60%;
+}
+
+input{
+  margin-bottom: 20px;
+}
+
+.dropClass{
+  margin-bottom: 20px;
+}
+body{
+  padding:20px;
+}
+
+.btnV{
+  color:#101818;
+  border-radius: 4px;
+  background-color: rgb(181, 227, 88);
+}
+
+
+.btnV:hover {
+  background-color: #99ef9c; /* Green */
+  color: rgb(244, 2, 175);
+}
+
+/*input:required {
+  border :3px solid #f0a780;
+} */
+.validity input:invalid {
+ 
+	background-color: #edb5af;
+	border: solid 1px #dd1111; 
+}
+.validityPhone input:invalid   {
+  content: "Please enter a value from ";
+  color: #e2072f;
+}
+
+[type=checkbox]:checked + label { /*  select a label that is placed immediately after the checked checkbox */
+	font-weight: bold;
+
+	font-size: 1.1rem;
+	color: #54b0ab;
+}
+
+
+
+
+
+
+
+.validity input:valid {
+	background-color: #b9eeb9;
+	border: solid 1px #6fa66f;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
