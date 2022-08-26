@@ -1,0 +1,95 @@
+
+
+body{
+  padding:50px;
+  margin:100px;
+}
+
+
+.row {
+  display: flex;
+  width: 200px;
+  height:100px;
+}
+
+.row div {
+  width: 200px;
+  height:100px;
+}
+
+.noMargin {
+  margin: 0px;
+}
+
+/* intial state of square */
+.one {
+  background-color: red;
+  transition: transform .7s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: top left;
+}
+
+
+.two {
+  background-color: yellow;
+  transition: transform .7s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: top right;
+}
+
+
+.three {
+  background-color: green;
+  transition: transform .7s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: bottom left;
+}
+
+
+.four {
+  background-color: blue;
+  transition: transform .7s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: bottom right;
+}
+
+
+
+/* transformation when mouse is hovered over allSq area */
+.allSq :hover #four {
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}
+
+.allSq :hover #three {
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+}
+
+.allSq :hover #one {
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.allSq :hover #two {
+  transform: rotate(-90deg);
+  transform-origin: top right;
+}
+
+
+/* text Hi */
+#wholeDiv .text {
+  position:center;
+  bottom:30px;
+  left:0px;
+  visibility:hidden;
+  z-index:-9 ;
+  margin:0px;
+  padding: 0px;
+  
+  }
+
+  #wholeDiv:hover .text {
+  visibility:visible;
+  }
+
