@@ -11,10 +11,7 @@ article.html
    -->checkbox after ticked changes it color
 
 
-
-
-
 animation.html
-the square should rotate 90 degree from corner when main  mouse is hovered over main div area and a text hi should display below it.   
+the square should rotate 90 degree from corner when main  mouse is hovered over main div area and a text hi should display below it.  
 
 
