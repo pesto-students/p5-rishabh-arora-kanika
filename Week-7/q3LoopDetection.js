@@ -15,6 +15,7 @@ class LinkedList {
     if (index < 0 || index >= this.length) return null;
     let current = this.head;
     for (let i = 0; i < index; i++) {
+      
       //index-->value we want to get to .
       current = current.next;
     }
@@ -30,6 +31,28 @@ class LinkedList {
     }
 
     console.log(`${output}null`); //last element points to null
+  }
+
+  loopCreate(ind1) {
+    let siLi = this.length;
+    let ind2 = siLi - 1;
+ 
+    let current = this.head;
+    let letInd1 = null;
+    let letInd2 = null;
+    for (let i = 0; i <= ind2; i++) {
+      if (i === ind1) {
+        letInd1 = current;
+   
+      }
+      if (i === ind2) {
+        letInd2 = current;
+       
+      }
+      current = current.next;
+    }
+
+    letInd2.next = letInd1.next;
   }
 
   insertAtIndex(index, value) {
@@ -57,24 +80,23 @@ class LinkedList {
     this.length--;
   }
 
-  rotate(k) {
-    for (let i = 0; i < k; i++) {
-      let headPresent = this.head;
-      let newHead = this.head.next;
-      this.head = newHead;
-      let current = newHead;
-
-      let lastNode;
-      while (current) {
-        if (current.next == null) {
-          lastNode = current;
-        }
-
-        current = current.next;
+  loopDetect() {
+    let first = this.head;
+    let second = this.head;
+    let bolVal = false;
+    while (first !== null && second !== null && second.next !== null) {
+    
+      first = first.next;
+ 
+      second = second.next.next;
+      if (first === second) {
+        
+        bolVal = true;
+        break;
       }
-      lastNode.next = headPresent;
-      headPresent.next = null;
     }
+
+    return bolVal;
   }
 }
 
@@ -91,9 +113,19 @@ l1.insertAtHead(20);
 l1.insertAtHead(30);
 
 l1.insertAtIndex(2, 40);
-console.log("before rotation");
+l1.insertAtIndex(3, 60);
 l1.print();
+//x->xth element in linked list .
+let x=5;
+let finalx=x-1;
+if(x !==0){
+  l1.loopCreate(finalx);
+}
 
-l1.rotate(3);
-console.log("after rotation");
-l1.print();
+bolVal = l1.loopDetect();
+console.log("bolVAL", bolVal);
+if (bolVal == false) {
+  console.log("No loop");
+} else {
+  console.log("loop there");
+}

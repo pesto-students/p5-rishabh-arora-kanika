@@ -1,6 +1,6 @@
 question 1 file name is q1reverseLinkedList.js
 question 2 file name is q2RotateLinkedList.js
-
+question 3 file name is q3LoopDetection.js
 question 4 file name is q4ParenthesisChecker.js
 question 5 file name is q5NextGreaterElement.js
 question 6 file name is q6QueueUsingStack.js
@@ -10,6 +10,9 @@ Reverse the given linked list.
 
 q2RotateLinkedList.js
 Rotate the given linked list
+
+q3LoopDetection.js
+Detect the loop in given linked list.
 
 q4ParenthesisChecker.js
 Given an expression string x. Examine whether the pairs and the orders of“{“,”}”,”(“,”)”,”[“,”]” are correct in exp.For example, the function should return 'true' for exp= “[()]{}{()()}” and 'false' for exp =“[(])
